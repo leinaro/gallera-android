@@ -1,6 +1,7 @@
 package co.leinaro.gallera;
 
 
+import co.leinaro.gallera.api.client.ApiGallera;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -18,7 +19,7 @@ class ChickListPresenter {
         mApi.getChicks().enqueue(new Callback<ApiGallera.Responses>() {
             @Override
             public void onResponse(Call<ApiGallera.Responses> call, Response<ApiGallera.Responses> response) {
-                mView.getChickSuccess(response.body().chickens);
+                mView.getChickSuccess(response.body());
             }
 
             @Override

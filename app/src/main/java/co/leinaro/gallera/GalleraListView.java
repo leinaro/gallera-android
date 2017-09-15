@@ -1,8 +1,8 @@
 package co.leinaro.gallera;
 
 
-import java.util.List;
+import co.leinaro.gallera.api.client.ApiGallera;
 
 interface GalleraListView {
-    void getChickSuccess(List<Chick> chickList);
+    void getChickSuccess(ApiGallera.Responses response);
 }

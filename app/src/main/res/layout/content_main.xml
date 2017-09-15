@@ -15,7 +15,7 @@
 
         <fragment
             android:id="@+id/list"
-            android:name="co.leinaro.gallera.GalleraListFragment"
+            android:name="co.leinaro.gallera.DatesListFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />

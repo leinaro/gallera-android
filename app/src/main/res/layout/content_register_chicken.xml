@@ -8,9 +8,12 @@
     tools:context="co.leinaro.gallera.RegisterChickenActivity"
     tools:showIn="@layout/activity_register_chicken">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
 
         <Button
             android:id="@+id/btn_upload"
@@ -24,9 +27,60 @@
             android:layout_height="wrap_content"
             android:src="@mipmap/ic_launcher" />
 
-        <MaterialEd
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/coliseo_responsible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Responsable de la marca" />
 
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/coliseo_plate_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numero de la placa" />
 
-    </RelativeLayout>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/breeder_plate_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Placa enrazador" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/owner_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre dueño" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/breeder_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre enrazador" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="peso" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="color" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/pata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="pata" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/cresta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="cresta" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

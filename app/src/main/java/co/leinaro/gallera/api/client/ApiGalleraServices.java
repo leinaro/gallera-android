@@ -1,11 +1,11 @@
-package co.leinaro.gallera;
+package co.leinaro.gallera.api.client;
 
 
 import java.util.List;
 
+import co.leinaro.gallera.entities.Chick;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Multipart;
@@ -16,12 +16,12 @@ public interface ApiGalleraServices {
     @GET("get_chick")
     Call<ApiGallera.Responses> getChicks();
 
-    @POST("register_chick")
-    Call<List<Chick>> registerChick(Chick chick);
-
     @Multipart
-    @POST("/")
-    Call<ResponseBody> postImage(@Part MultipartBody.Part image, @Part("name") RequestBody name);
+    @POST("register_chick")
+    Call<ApiGallera.Responses> registerChick(
+            @Part("description") RequestBody description,
+            @Part MultipartBody.Part file,
+            @Part("chick") RequestBody chick);
 
     @GET("delete_chick")
     Call<List<Chick>> deleteChick(String token);
